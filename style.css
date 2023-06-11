@@ -9,13 +9,15 @@ body{
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
     text-align: left;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 h1{
+    margin: 0;
+}
+h2{
     margin: 0;
 }
 p{
@@ -31,12 +33,12 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: inherit;
 
     .logo{
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-color: #e3decf;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,7 +85,7 @@ p{
                         align-items: center;
                         /* don't stretch the image */
                         object-fit: cover;
-                        transition: all 0.3s ease-in-out;
+                        transition: all 0.2s ease-in-out;
 
                         /* hover */
                         &:hover{
@@ -98,4 +100,57 @@ p{
 }
 
 
+/* links */
 
+.link-container{
+    /* center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: inherit;
+}
+
+.link-header{
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #1f1f1f;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.link-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.link-item{
+    outline: black 1px solid;
+    padding: 10px 300px;
+    margin: 0 10px;
+    transition: all 0.4s ease-in-out;
+    &:hover{
+        background-color: #efe7d2;
+    }
+}
+
+.link-a{
+    text-decoration: none;
+        color: #1f1f1f;
+        font-size: 1.4rem;
+        
+        transition: all 0.2s ease-in-out;
+
+        /* hover */
+        &:hover{
+            transform: scale(1.03);
+            
+        }
+}
