@@ -23,6 +23,24 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+footer{
+    /* center all content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0;
+    color: var(--font-body-color);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+
+
 h1{
     margin: 0;
 }
@@ -117,6 +135,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: inherit;
@@ -126,6 +145,7 @@ p{
     font-size: 0.8rem;
     letter-spacing: 3px;
     color: var(--font-body-color);
+
     margin-top: 20px;
     margin-bottom: 10px;
     padding: 0;
@@ -137,6 +157,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -147,8 +168,10 @@ p{
     outline-style: dashed;
     outline-width: 1.5px;
     border-radius: 2px;
+
     padding: 10px 300px;
     margin: 14px 10px;
+
     transition: background-color 0.4s ease-out, outline-style 10s ease-in, transform 0.2s ease-in-out;
 
     text-decoration: none;
