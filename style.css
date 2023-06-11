@@ -1,8 +1,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+
+:root{
+    --background-color: #fcf7e9;
+    --link-item-color: #efe7d2;
+    --font-heading-color: #4e4e4f;
+    --font-body-color: #1f1f1f;
+
+}
+
 body{
-    background-color: #fcf7e9;
+    background-color: var(--background-color);
     /* try this purple */
     /* background-color: #d8cfe3; */
     font-family: 'VT323', monospace;
@@ -48,14 +57,14 @@ p{
 
     .name{
         font-size: 1rem;
-        color: #4e4e4f;
+        color: var(--font-heading-color);
         margin-top: 12px;
         margin-bottom: 4px;
         padding: 0;
     }
 
     .description{
-        color: #4e4e4f;
+        color: var(--font-heading-color);
         font-size: 1.3rem;
     }
 
@@ -116,9 +125,9 @@ p{
 .link-header{
     font-size: 0.8rem;
     letter-spacing: 3px;
-    color: #1f1f1f;
+    color: var(--font-body-color);
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 0;
 }
 
@@ -127,23 +136,28 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 12px;
     padding: 0;
 }
 
 .link-item{
-    outline: black 1px solid;
+    outline: var(--font-body-color) 1.3px;
+    outline-style: dashed;
+    outline-width: 1.4px;
+    border-radius: 2px;
     padding: 10px 300px;
     margin: 0 10px;
-    transition: all 0.4s ease-in-out;
+    transition: background-color 0.4s ease-out, outline-style 10s ease-in;
     &:hover{
-        background-color: #efe7d2;
+        background-color: var(--link-item-color);
+        outline-style: solid;
+        outline-width: 1.2px;
     }
 }
 
 .link-a{
     text-decoration: none;
-        color: #1f1f1f;
+        color: var(--font-body-color);
         font-size: 1.4rem;
         
         transition: all 0.2s ease-in-out;
