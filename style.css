@@ -1,0 +1,15 @@
+body{
+    background-color: #e3decf;
+    /* try this purple */
+    /* background-color: #d8cfe3; */
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
