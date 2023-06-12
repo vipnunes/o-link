@@ -230,3 +230,29 @@ p{
         transform: scale(1.03);
     }
 }
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 800px){
+
+    .about{
+        .logo{
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+        }
+        .name{
+            font-size: 0.9rem;
+        }
+        .description{
+            font-size: 1.1rem;
+        }
+    }
+
+    .link-a{
+        width: 80vw;
+        font-size: 1.2rem;
+    }
+}
