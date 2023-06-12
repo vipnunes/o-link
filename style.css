@@ -129,7 +129,8 @@ p{
 
 
             .socials-li{
-                margin-right: 14px;
+                margin-right: 7px;
+                margin-left: 7px;
                 padding: 0;
                 .socials-a{
                     .socials-img{
@@ -221,6 +222,7 @@ p{
     text-decoration: none;
     color: var(--font-body-color);
     font-size: 1.4rem;
+    letter-spacing: 0.8px;
     
 
     &:hover{
@@ -242,6 +244,11 @@ p{
             margin-top: 20px;
             width: 80px;
             height: 80px;
+            /* center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
         .name{
             font-size: 0.9rem;
@@ -249,10 +256,18 @@ p{
         .description{
             font-size: 1.1rem;
         }
+        .socials{
+            /* center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
     }
 
     .link-a{
-        width: 80vw;
-        font-size: 1.2rem;
+        width: 76vw;
+        font-size: 1rem;
+        letter-spacing: 1px;
     }
 }
