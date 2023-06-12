@@ -37,6 +37,19 @@ footer{
     color: var(--font-body-color);
     font-size: 0.8rem;
     letter-spacing: 1px;
+    /* not selectable or draggable */
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    /* not draggable */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
 }
 
 
