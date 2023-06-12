@@ -92,11 +92,27 @@ p{
         margin-top: 12px;
         margin-bottom: 4px;
         padding: 0;
+
+        /* not selectable */
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
     }
 
     .description{
         color: var(--font-heading-color);
         font-size: 1.3rem;
+
+        /* not selectable */
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
     }
 
     .socials{
@@ -162,6 +178,14 @@ p{
     margin-top: 20px;
     margin-bottom: 10px;
     padding: 0;
+
+    /* not selectable */
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
 }
 
 .link-list{
