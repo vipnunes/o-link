@@ -35,6 +35,10 @@ To use Personal Linktree for yourself, follow these steps:
 
 Contributions to enhance the Personal Linktree project are welcome! If you have any suggestions or improvements, feel free to create a pull request.
 
+## Credits
+
+The user interface design is inspired by [Bio Link's](https://bio.link/) Retro Theme!
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
