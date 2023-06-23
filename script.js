@@ -28,6 +28,13 @@ addEventListener('DOMContentLoaded', () => {
         const toggle = document.getElementById('invert');
         console.log(toggle.checked);
         if (toggle.checked) {
+
+            // check for toggle state change
+            toggle.addEventListener('change', () => {
+                return;
+            })
+
+
             const links = document.querySelectorAll('.link-a')
             links.forEach(link => {
 
@@ -48,16 +55,42 @@ addEventListener('DOMContentLoaded', () => {
 
                 url = `${name} - ${url}`
 
-                link.addEventListener('mouseenter', () => {
+                function mouseenter(){
                     link.style.opacity = 0;
                     link.innerHTML = url;
                     link.style.opacity = 1;
-                })
-                link.addEventListener('mouseleave', () => {
+                }
+                function mouseleave(){
                     link.innerHTML = link.dataset.name
-                })
+                }
+
+                link.addEventListener('mouseenter', mouseenter)
+                link.addEventListener('mouseleave', mouseleave)
             })
 
         }
+        else{
+            // remove event listeners
+            const links = document.querySelectorAll('.link-a')
+            
+            links.forEach(link => {
+                function mouseenter(){
+                    link.style.opacity = 0;
+                    link.innerHTML = url;
+                    link.style.opacity = 1;
+                }
+                function mouseleave(){
+                    link.innerHTML = link.dataset.name
+                }
+                // remove event listeners
+                link.removeEventListener('mouseenter', mouseenter)
+                link.removeEventListener('mouseleave', mouseleave)
+
+                console.log('removed event listeners');
+            })
+        }
     }
+
+    
+
 })
