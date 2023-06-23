@@ -59,9 +59,17 @@ links.forEach(link => {
     url = ` - ${url}`
 
     link.addEventListener('mouseenter', () => {
-        link.innerHTML += url
+        link.style.opacity = 0;
+        window.setTimeout(function () {
+            link.innerHTML += url
+            
+            link.style.opacity = 1;
+        }, 500);
+        
+
     })
     link.addEventListener('mouseleave', () => {
         link.innerHTML = link.dataset.name
     })
 })
+
