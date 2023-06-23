@@ -43,30 +43,26 @@ const links = document.querySelectorAll('.link-a')
 links.forEach(link => {
 
     let url = link.href;
+    let name = link.dataset.name;
     console.log(url);
     
     if (url.includes('https://')) {
-        url = url.replace('https://', '')
+        url = url.replace('https://', '');
     } else {
-        url = url.replace('http://', '')
+        url = url.replace('http://', '');
     }
 
     // remove trailing slash
     if (url.endsWith('/')) {
-        url = url.slice(0, -1)
+        url = url.slice(0, -1);
     }
 
-    url = ` - ${url}`
+    url = `${name} - ${url}`
 
     link.addEventListener('mouseenter', () => {
         link.style.opacity = 0;
-        window.setTimeout(function () {
-            link.innerHTML += url
-            
-            link.style.opacity = 1;
-        }, 500);
-        
-
+        link.innerHTML = url;
+        link.style.opacity = 1;
     })
     link.addEventListener('mouseleave', () => {
         link.innerHTML = link.dataset.name
