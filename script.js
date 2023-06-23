@@ -14,7 +14,24 @@ btn.addEventListener('click', () => {
 
     const links = document.querySelectorAll('.link-a')
     links.forEach(link => {
-        link.innerHTML = link.href
+        let url = link.href;
+        console.log(url);
+        
+        if (url.includes('https://')) {
+            url = url.replace('https://', '')
+        } else {
+            url = url.replace('http://', '')
+        }
+
+        // remove trailing slash
+        if (url.endsWith('/')) {
+            url = url.slice(0, -1)
+        }
+        
+
+
+        console.log(url);
+        link.innerHTML = url;
     })
     }
 )
