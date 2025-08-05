@@ -4,10 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>otavio.top</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- favicon normal-->
     <link rel="icon" href="https://otavio.top/favicon.ico" type="image/jpg" >
+<style>  
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root{
+    --background-color: #000000; /* #fcf7e9; */
+    --link-item-color: #ffffff; /* #efe7d2; */
+    --font-heading-color: #ffffff; /* #4e4e4f; */
+    --font-body-color: #ffffff; /* #1f1f1f; */
+
+}
+
+body{
+    background-color: var(--background-color);
+    /* try this purple */
+    /* background-color: #d8cfe3; */
+    font-family: 'VT323', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    /* center all content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0;
+    color: var(--font-body-color);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    /* not selectable or draggable */
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    /* not draggable */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+}
+
+
+
+h1{
+    margin: 0;
+}
+h2{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+/* about */
+
+.about{
+    /* center all content */
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+
+    .logo{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* don't stretch the image */
+        object-fit: cover;
+    }
+
+    .name{
+        font-size: 1rem;
+        color: var(--font-heading-color);
+        margin-top: 12px;
+        margin-bottom: 4px;
+        padding: 0;
+
+        /* not selectable */
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+    }
+
+    .description{
+        color: var(--font-heading-color);
+        font-size: 1.3rem;
+
+        /* not selectable */
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+    }
+
+    .socials{
+        .socials-ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+
+
+            .socials-li{
+                margin-right: 7px;
+                margin-left: 7px;
+                padding: 0;
+                .socials-a{
+                    .socials-img{
+                        width: 30px;
+                        height: 30px;
+                        
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        /* don't stretch the image */
+                        object-fit: cover;
+                        transition: all 0.2s ease-in-out;
+
+                        /* hover */
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/* links */
+
+.link-container{
+    /* center */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: inherit;
+}
+
+.link-header{
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--font-body-color);
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+
+    /* not selectable */
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+
+.link-list{
+    /* display center and vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.link-a{
+    outline: var(--font-body-color) 1.3px;
+    outline-style: dashed;
+    outline-width: 1.5px;
+    border-radius: 2px;
+
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 700px;
+    padding: 10px;
+    margin: 8px 10px;
+
+    transition: background-color 0.4s ease-out, outline-style 10s ease-in, transform 0.2s ease-in-out;
+
+    text-decoration: none;
+    color: var(--font-body-color);
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    
+
+    &:hover{
+        background-color: var(--link-item-color);
+        outline-style: solid;
+        outline-width: 1.2px;
+        transform: scale(1.03);
+    }
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 800px){
+
+    .about{
+        .logo{
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+            /* center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .name{
+            font-size: 0.9rem;
+        }
+        .description{
+            font-size: 1.1rem;
+        }
+        .socials{
+            /* center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    .link-a{
+        width: 76vw;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}
+</style>
 
 </head>
 <body>
